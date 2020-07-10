@@ -25,13 +25,20 @@ Here's what the data looks like:
 
 
 
-Landing page: https://home.treasury.gov/policy-issues/cares-act/assistance-for-small-businesses/sba-paycheck-protection-program-loan-level-data
+
+Since the actual unzipped CSV file is too big to save as-is in this repo, I've only saved it as a ZIP file, which you'll have to unzip:
+
+Local copy: [ppp-150k-plus.zip](data/ppp-150k-plus.zip)
 Original source (Box Drive): https://sba.app.box.com/s/tvb0v5i57oa8gc6b5dcm9cyw7y2ms6pp
-Local mirror: [ppp-150k-plus.zip](data/ppp-150k-plus.zip)
+Landing page: https://home.treasury.gov/policy-issues/cares-act/assistance-for-small-businesses/sba-paycheck-protection-program-loan-level-data
 
-Since the actual unzipped CSV file is too big to save as-is in this repo, I've created a few sample files:
+For the purposes of this exercise, you'll have to unzip `ppp-150k-plus.zip` and rename the file `150k plus/PPP Data 150k plus.csv` to just: `ppp-loans.csv`
 
-- New York PPP records: [sample.ppp-150k-plus-ny.csv](data/sample.ppp-150k-plus-ny.csv) ([on Google Sheets](https://docs.google.com/spreadsheets/d/1FaAuS4KfSCFKUW14M1EGf3WDWyb1qsPfFhybDHPzNrs/edit?usp=sharing))
+
+For convenience's sake, I've also created a few sample selections of the data that are browsable on Google Sheets:
+
+- New York PPP records: [sample.ppp-loans-ny.csv](data/sample.ppp-loans-ny.csv) ([on Google Sheets](https://docs.google.com/spreadsheets/d/1FaAuS4KfSCFKUW14M1EGf3WDWyb1qsPfFhybDHPzNrs/edit?usp=sharing))
+
 
 
 

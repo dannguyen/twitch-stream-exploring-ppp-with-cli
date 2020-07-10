@@ -31,7 +31,7 @@ Examples:
 Let's see how Newsweek is shown in the records:
 
 ```sh
-$ cat ppp-150k-plus.csv | xsv search -i 'newsweek' 
+$ cat ppp-loans.csv | xsv search -i 'newsweek' 
 ```
 
 (The `-i` flag makes it a case-insensitive search)
@@ -45,7 +45,7 @@ LoanRange,BusinessName,Address,City,State,Zip,NAICSCode,BusinessType,RaceEthnici
 That's hard to read as a human so let's use `xsv select` to pick only the helpful columns:
 
 ```sh
-$ cat ppp-150k-plus.csv | xsv search -i 'newsweek' | xsv select LoanRange,BusinessName,City,State,NAICSCode,JobsRetained,DateApproved
+$ cat ppp-loans.csv | xsv search -i 'newsweek' | xsv select LoanRange,BusinessName,City,State,NAICSCode,JobsRetained,DateApproved
 ```
 
 We can pipe an additional command – `xsv table` – to make things look neat:
@@ -55,7 +55,7 @@ We can pipe an additional command – `xsv table` – to make things look neat:
 
 
 ```sh
-$ cat ppp-150k-plus.csv | xsv search -i 'newsweek' \
+$ cat ppp-loans.csv | xsv search -i 'newsweek' \
   | xsv select LoanRange,BusinessName,City,State,NAICSCode,JobsRetained,DateApproved \
   | xsv table
 ```
@@ -71,7 +71,7 @@ d $350,000-1 million  NEWSWEEK MAGAZINE LLC  NEW YORK  NY     541612     49     
 Let's try a less obviously news name/keyword, like `"Forbes"`:
 
 ```sh
-$ cat ppp-150k-plus.csv \
+$ cat ppp-loans.csv \
   | xsv search -i 'forbes' \
   | xsv select LoanRange,BusinessName,City,State,NAICSCode,JobsRetained,DateApproved \
   | xsv table
@@ -95,7 +95,7 @@ And the reason for that is because we did `xsv search` for `'forbes'` across *ev
 This is easy to fix by rearranging the order of operations – call `xsv select` *then* do `xsv search`:
 
 ```sh
-$ cat ppp-150k-plus.csv \
+$ cat ppp-loans.csv \
   | xsv select LoanRange,BusinessName,City,State,NAICSCode,JobsRetained,DateApproved \
   | xsv search -i 'forbes' \
   | xsv table
@@ -109,7 +109,7 @@ Let's do a bunch of examples at once, using the regular expression syntax for `O
 
 
 ```sh
-$ cat ppp-150k-plus.csv \
+$ cat ppp-loans.csv \
   | xsv select LoanRange,BusinessName,City,State,NAICSCode,JobsRetained,DateApproved \
   | xsv search -i 'daily caller|newsmax|digiday|fortune media|los angeles magazine|hour media' \
   | xsv table
@@ -124,7 +124,7 @@ https://twitter.com/kerrymflynn/status/1280201142182522881
 We run into the same too-broad problem with `xsv search`, but luckily it has a flag – `-s` – that allows us to narrow the columns for a search:
 
 ```sh
-$ cat ppp-150k-plus.csv \
+$ cat ppp-loans.csv \
   | xsv search -i 'magazine' -s 'BusinessName' \
   | xsv count
 
@@ -138,7 +138,7 @@ $ cat ppp-150k-plus.csv \
 Without limiting the text match to `BusinessName`:
 
 ```sh
-$ cat ppp-150k-plus.csv \
+$ cat ppp-loans.csv \
   | xsv search -i 'magazine' \
   | xsv count
 
