@@ -44,6 +44,16 @@ Landing page (census.gov): https://www.census.gov/eos/www/naics/downloadables/do
 
 There's a couple of files of interest:
 
+NAICS 6-digit code file:
+
+- original source: https://www.census.gov/eos/www/naics/2017NAICS/2-6%20digit_2017_Codes.xlsx
+- local copies:
+    - original XLSX: [naics-codes.xlsx](data/naics-codes.xlsx) ([Google Sheets](https://docs.google.com/spreadsheets/d/1AkKFHJb1GSOmPTzNyPsg3swulqbmwm8hGZVW0J-5tk8/edit#gid=1638180595))
+    - converted+tidy CSV: [naics-codes.csv](data/naics-codes.csv)([Google Sheets](https://docs.google.com/spreadsheets/d/1AkKFHJb1GSOmPTzNyPsg3swulqbmwm8hGZVW0J-5tk8/edit#gid=1223701275))
+
+
+
+
 NAICS descriptions:
 - local mirror: [naics-descriptions.xlsx](data/naics-descriptions.xlsx) ([on Google Sheets](https://docs.google.com/spreadsheets/d/1495vxQnN0Q49ysZB6jB8vYiZC2TnR-t5Ph4-IAELzBg/edit#gid=1079796598))
 - original source: https://www.census.gov/eos/www/naics/2017NAICS/2017_NAICS_Descriptions.xlsx
