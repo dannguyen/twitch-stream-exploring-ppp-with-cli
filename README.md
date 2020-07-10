@@ -37,8 +37,9 @@ For convenience's sake, I've also created a few sample selections of the data th
 - New York PPP records: [sample.ppp-loans-ny.csv](data/sample.ppp-loans-ny.csv) ([on Google Sheets](https://docs.google.com/spreadsheets/d/1FaAuS4KfSCFKUW14M1EGf3WDWyb1qsPfFhybDHPzNrs/edit?usp=sharing))
 
 
+You can also check out the data with useful augments, as published by Simon Willison using Datasette: https://sba-loans-covid-19.datasettes.com/loans_150k_plus/foia_150k_plus
 
-
+Here's more info on what Datasette is and how he wrangled the PPP data: https://github.com/simonw/sba-loans-covid-19-datasette
 
 ### North American Industry Classification System:
 
