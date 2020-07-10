@@ -1,4 +1,4 @@
-sequence_number,code,title
+sequence_number,naics_code,naics_title
 1,11,"Agriculture, Forestry, Fishing and Hunting"
 2,111,Crop Production
 3,1111,Oilseed and Grain Farming
