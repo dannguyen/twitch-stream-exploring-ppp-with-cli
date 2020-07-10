@@ -30,12 +30,24 @@ Usage:
 ```
 
 
+So this is the `xsv join` ccommand for joining `ppp-loans.csv` and `naics-codes.csv` on their respective NAICS code columns:
 
+```sh
+$ xsv join --left 'NAICSCode' ppp-loans.csv \
+        'naics_code' naics-codes.csv \
+    > ppp-coded.csv
+```
+
+The resulting file, `ppp-coded.csv`, looks the same as `ppp-loans.csv`, except it will have two new columns appended: `naics_code` and `naics_title` (note that `NAICSCode` from `ppp-loans.csv` is part of this table, even though it's theoretically the same as the `naics_code` from `naics-codes.csv`)
+
+However, to make data exploration life a little easier, we want those 2 new columns next to the `BusinessName` column, so I use `xsv select` and some of its fancier syntax for column references to rearrange things as I like:
 
 
 ```sh
 $ xsv join --left 'NAICSCode' ppp-loans.csv \
         'naics_code' naics-codes.csv \
     | xsv select 'LoanRange,BusinessName,naics_code,naics_title,Address-CD' \
-    > ppp-loans-joined.csv
+    > ppp-coded.csv
 ```
+
+A sample of that resulting join can be found on Google Sheets: https://docs.google.com/spreadsheets/d/1gvujFmMTm1l2Q_ivgYmAa3DFZp_f_62BcPjSzQUN6ZE/edit#gid=518711005

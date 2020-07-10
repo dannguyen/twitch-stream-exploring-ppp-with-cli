@@ -11,6 +11,14 @@ going to try to twitch stream this. Here are some links to notes and whatever et
 Both tools are authored by [Andrew Gallant aka BurntSushi](https://github.com/BurntSushi) and both are written in Rust, which makes them generally easier to install across any platform.
 
 
+Microsoft Excel:
+
+```
+alias xlopen="open -a 'Microsoft Excel'"
+```
+
+
+
 ## The data
 
 ### SBA Paycheck Protection Program Loan Level Data
